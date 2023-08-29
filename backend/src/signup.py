@@ -10,13 +10,7 @@ Description: Contains all functions related to signing up.
 
 import hashlib
 from database import database
-from error import AccessError, InputError
-import other as other
-from time import time
-
-MAX_FIRST_NAME_LENGTH = 50
-MAX_LAST_NAME_LENGTH = 50
-SENDER_ADDRESS = "seng2021sox@gmail.com"
+from error import InputError
 
 def signup(name: str, email: str)->dict:
     store = database.get()
@@ -26,7 +20,12 @@ def signup(name: str, email: str)->dict:
         raise InputError("Email has already been used")
     else:
         emails[email] = name
+        exportToExcel
 
     return {}
 
 
+def exportToExcel():
+    # TO DO
+
+    return {}
