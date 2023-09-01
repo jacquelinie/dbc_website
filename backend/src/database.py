@@ -12,13 +12,13 @@ import pickle
 FILE_LOCATION = "database.p"
 
 initial_object = {
-    'emails': {}
+    'users': {}
 }
 
 
 def clear_store():
     store = database.get()
-    store["emails"] = {}
+    store["users"] = {}
     database.set(store)
 
 

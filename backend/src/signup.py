@@ -14,25 +14,26 @@ from error import InputError
 
 def signup(name: str, email: str)->dict:
     store = database.get()
-    emails = store['emails']
+    users = store['users']
 
     # Error handling
     if name == None or email == None:
         raise InputError("Please enter a name and an email address")
-    if email in emails.keys():
+    emails = [user["email"] for user in users.values()]
+    if email in emails:
         raise InputError("Email has already been used")
 
     # Save email and name
-    emails[email] = name
-    customer_id = len(emails)
+    customer_id = len(users)
+    users[customer_id] = { "name": name, "email": email }
 
     # Set store:
-    store['emails'] = emails
+    store['users'] = users
     database.set(store)
 
     exportToExcel
 
-    return customer_id
+    return { "customer_id": customer_id }
 
 
 def exportToExcel():
