@@ -9,8 +9,8 @@ Description: Contains all functions related to signing up.
 '''
 
 import hashlib
-from database import database
-from error import InputError
+from src.database import database
+from src.error import InputError
 
 def signup(name: str, email: str)->dict:
     store = database.get()

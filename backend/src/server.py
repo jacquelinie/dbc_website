@@ -18,6 +18,7 @@ from flask_cors import CORS
 # Functions
 from src import config
 from src.signup import signup
+from src.email import send_email
 from src.database import clear_store
 
 
@@ -66,8 +67,11 @@ def handle_signup():
     email = request_data.get('email', None)
     return signup(name, email)
 
-
-
+@application.route("/email", methods=['POST'])
+def handle_email():
+    request_data = request.get_json()
+    customer_id = request_data["customer_id"]
+    return send_email(customer_id)
 
 
 # To run the API server
