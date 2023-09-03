@@ -16,8 +16,8 @@ from email import encoders
 import smtplib
 from database import database
 
-SENDER_EMAIL = "dreambody@gmail.com"
-SENDER_PASS = "testerpass"
+SENDER_EMAIL = "dbctesteremail@gmail.com"
+SENDER_PASS = "qyahwdqeiknagmqa"
 
 def send_email(customer_id):
     store = database.get()
@@ -60,6 +60,6 @@ def send_email(customer_id):
             server.login(SENDER_EMAIL, SENDER_PASS)
         except smtplib.SMTPAuthenticationError:
             raise InputError("An error has occurred while trying to connect to SMTP server.")
-        server.sendmail(email['From'], email['To'], email.as_string())
+        server.sendmail(SENDER_EMAIL, recipient_email, email.as_string())
 
     return {}
