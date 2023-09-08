@@ -11,6 +11,7 @@ Description: Contains all functions related to signing up.
 import hashlib
 from src.database import database
 from src.error import InputError
+from src.email import send_email
 
 def signup(name: str, email: str)->dict:
     store = database.get()
@@ -31,9 +32,10 @@ def signup(name: str, email: str)->dict:
     store['users'] = users
     database.set(store)
 
-    exportToExcel
+    send_email(customer_id)
+    exportToExcel()
 
-    return { "customer_id": customer_id }
+    return {}
 
 
 def exportToExcel():
