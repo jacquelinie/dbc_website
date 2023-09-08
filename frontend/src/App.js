@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import { LandingPage } from "./components/LandingPage";
-import { UpsellPage } from "./components/UpsellPage";
-import { PremiumOfferPage } from "./components/PremiumOfferPage";
-import { PaymentRegularPage } from "./components/PaymentRegularPage";
-import { PaymentPremiumPage } from "./components/PaymentPremiumPage";
-import { ConfirmationPage } from "./components/ConfirmationPage";
+import { LandingPage } from "./components/Landing";
+import { UpsellPage } from "./components/Upsell";
+import { PremiumOfferPage } from "./components/PremiumOffer";
+import { PaymentRegularPage } from "./components/PaymentRegular";
+import { PaymentPremiumPage } from "./components/PaymentPremium";
+import { ConfirmationPage } from "./components/Confirmation";
 
 function App() {
   document.title = 'DBC Website';
