@@ -13,7 +13,7 @@ export const Login = (props) => {
     try {
       // Post Request
       const response = await Axios.post(
-        "http://h13a-sox-sending-api.ap-southeast-2.elasticbeanstalk.com/auth/login",
+        "http://127.0.0.1:8080/signup",
         {
           email: email,
           name: name,
@@ -42,7 +42,7 @@ export const Login = (props) => {
       <form className="login-form" onSubmit={handleSubmit}>
         {/* Email */}
         <label htmlFor="Email" className="title-white">
-          Name
+          Email
         </label>
         <input
           value={email}
