@@ -67,6 +67,7 @@ def handle_signup():
     email = request_data.get('email', None)
     return signup(name, email)
 
+
 # To run the API server
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, quit_gracefully)

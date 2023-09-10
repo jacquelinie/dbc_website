@@ -13,3 +13,4 @@ from src.config import url
 CLEAR_URL = f"{url}/clear"
 
 SIGNUP_URL = f"{url}/signup"
+EMAIL_URL = f"{url}/email"

@@ -7,6 +7,7 @@ Created: 1/9/2023
 Description: Sends the free materials to the user
 
 '''
+import os
 
 from src.error import AccessError, InputError
 from email.mime.multipart import MIMEMultipart
@@ -14,10 +15,11 @@ from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
 from email import encoders
 import smtplib
-from database import database
+from src.database import database
 
 SENDER_EMAIL = "dbctesteremail@gmail.com"
 SENDER_PASS = "qyahwdqeiknagmqa"
+RESOURCE_LIST = ["src/Resource1.pdf", "src/Resource2.pdf", "src/Resource3.pdf", "src/Resource4.pdf"]
 
 def send_email(customer_id):
     store = database.get()
@@ -28,7 +30,7 @@ def send_email(customer_id):
         raise AccessError("Customer does not have access")
     user = users[customer_id]
     recipient_email = user["email"]
-    content = "Dear " + user["name"] + ", please find attached the free resources to help you achieve your fitness goals."
+    content = "Dear " + user["name"] + ", \nPlease find attached the free resources to help you achieve your fitness goals.\n\nYours sincerely,\nDream Body Coaching.\n(+61) 416156733\ndreambodycoaching@gmail.com"
 
     # Create email object
     email = MIMEMultipart()
@@ -37,21 +39,8 @@ def send_email(customer_id):
     email['To'] = recipient_email
     email.attach(MIMEText(content))  # message body
 
-    # Attach free resources
-    pdfname = 'Free Resources.pdf'
-
-    # open the file in bynary
-    binary_pdf = open(pdfname, 'rb')
-
-    payload = MIMEBase('application', 'octate-stream', Name=pdfname)
-    payload.set_payload((binary_pdf).read())
-
-    # enconding the binary into base64
-    encoders.encode_base64(payload)
-
-    # add header with pdf name
-    payload.add_header('Content-Decomposition', 'attachment', filename=pdfname)
-    email.attach(payload)
+    for resource in RESOURCE_LIST:
+        attach_resources(email, resource)
 
     # Login and send email
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
@@ -63,3 +52,19 @@ def send_email(customer_id):
         server.sendmail(SENDER_EMAIL, recipient_email, email.as_string())
 
     return {}
+
+def attach_resources(email, resource):
+    # Remove directory name
+    pdfname = resource.replace("src/", "")
+
+    # Open file in binary and encode into base64
+    binary_pdf = open(resource, 'rb')
+    payload = MIMEBase('application', 'octate-stream', Name=pdfname)
+    payload.set_payload((binary_pdf).read())
+    encoders.encode_base64(payload)
+
+    # Add header of pdf
+    payload.add_header('Content-Decomposition', 'attachment', filename=pdfname)
+    
+    # Attach
+    email.attach(payload)
