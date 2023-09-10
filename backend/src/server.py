@@ -68,15 +68,6 @@ def handle_signup():
     return signup(name, email)
 
 
-@application.route("/email", methods=['POST'])
-def handle_email():
-    request_data = request.get_json()
-    customer_id = request_data["customer_id"]
-    return send_email(customer_id)
-
-
-
-
 # To run the API server
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, quit_gracefully)

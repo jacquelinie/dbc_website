@@ -1,0 +1,39 @@
+.success-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #5cb85c;
+  color: white;
+  text-align: center;
+}
+
+.success-page h1 {
+  margin: 0;
+}
+
+.tick-image {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.return-home-button {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #4680B0;
+}
+
+.return-home-button img {
+  margin-right: 10px;
+}
+
+
+return-button {
+    border: none;
+    cursor: pointer;
+    color: #4680B0;
+  }
