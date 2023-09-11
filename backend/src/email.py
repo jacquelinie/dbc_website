@@ -19,7 +19,8 @@ from src.database import database
 
 SENDER_EMAIL = "dbctesteremail@gmail.com"
 SENDER_PASS = "qyahwdqeiknagmqa"
-RESOURCE_LIST = ["src/Resource1.pdf", "src/Resource2.pdf", "src/Resource3.pdf", "src/Resource4.pdf"]
+RESOURCE_LIST = ["{DIRECTORY_NAME}Resource1.pdf", "{DIRECTORY_NAME}Resource2.pdf", "{DIRECTORY_NAME}Resource3.pdf", "{DIRECTORY_NAME}Resource4.pdf"]
+DIRECTORY_NAME = "src/"
 
 def send_email(customer_id):
     store = database.get()
@@ -55,7 +56,7 @@ def send_email(customer_id):
 
 def attach_resources(email, resource):
     # Remove directory name
-    pdfname = resource.replace("src/", "")
+    pdfname = resource.replace(DIRECTORY_NAME, "")
 
     # Open file in binary and encode into base64
     binary_pdf = open(resource, 'rb')
@@ -65,6 +66,6 @@ def attach_resources(email, resource):
 
     # Add header of pdf
     payload.add_header('Content-Decomposition', 'attachment', filename=pdfname)
-    
+
     # Attach
     email.attach(payload)
