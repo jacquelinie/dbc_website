@@ -8,7 +8,9 @@ Description: Contains all functions related to signing up.
 
 '''
 
-import hashlib
+import pandas as pd
+import os
+from openpyxl import load_workbook, Workbook
 from src.database import database
 from src.error import InputError
 from src.email import send_email
@@ -33,12 +35,35 @@ def signup(name: str, email: str)->dict:
     database.set(store)
 
     send_email(customer_id)
-    exportToExcel()
+    exportToExcel(customer_id)
 
     return {}
 
 
-def exportToExcel():
-    # TO DO
+def exportToExcel(customer_id):
+    store = database.get()
+    users = store['users']
+    user = users[customer_id]
+
+    # Check for excel file, if doesn't exist create it
+    excel_name = "Customer Emails.xlsx"
+    if not os.path.exists(excel_name):
+        Wb = Workbook()
+        Wb.save(excel_name)
+
+    # Create data frame for customer
+    data = {'Name': user["name"] ,
+        'Email': user["email"]}
+    df = pd.DataFrame(data)
+
+    # Add to excel
+    book = load_workbook(excel_name)
+    writer = pd.ExcelWriter(excel_name, engine='openpyxl')
+    writer.book = book
+
+    df.to_excel(writer, index=False, header=False, startrow=writer.sheets['Sheet1'].max_row)
+
+    writer.save()
+    writer.close()
 
     return {}
