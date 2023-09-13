@@ -19,7 +19,7 @@ from src.database import database
 
 SENDER_EMAIL = "dbctesteremail@gmail.com"
 SENDER_PASS = "qyahwdqeiknagmqa"
-RESOURCE_LIST = ["{DIRECTORY_NAME}Resource1.pdf", "{DIRECTORY_NAME}Resource2.pdf", "{DIRECTORY_NAME}Resource3.pdf", "{DIRECTORY_NAME}Resource4.pdf"]
+RESOURCE_LIST = ["directory/Resource1.pdf", "directory/Resource2.pdf", "directory/Resource3.pdf", "directory/Resource4.pdf"]
 DIRECTORY_NAME = "src/"
 
 def send_email(customer_id):
@@ -56,10 +56,11 @@ def send_email(customer_id):
 
 def attach_resources(email, resource):
     # Remove directory name
-    pdfname = resource.replace(DIRECTORY_NAME, "")
+    pdfname = resource.replace("directory/", "")
+    pathname = resource.replace("directory/", DIRECTORY_NAME)
 
     # Open file in binary and encode into base64
-    binary_pdf = open(resource, 'rb')
+    binary_pdf = open(pathname, 'rb')
     payload = MIMEBase('application', 'octate-stream', Name=pdfname)
     payload.set_payload((binary_pdf).read())
     encoders.encode_base64(payload)

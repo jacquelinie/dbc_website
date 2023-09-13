@@ -35,7 +35,7 @@ def signup(name: str, email: str)->dict:
     database.set(store)
 
     send_email(customer_id)
-    exportToExcel(customer_id)
+    # exportToExcel(customer_id)
 
     return {}
 
