@@ -64,7 +64,7 @@ def export_to_excel(customer_id):
     writer = pd.ExcelWriter(excel_name, engine='openpyxl')
     writer.book = book
 
-    df.to_excel(writer, index=False, header=False)
+    df.to_excel(writer, index=False, header=False, sheet_name=s_name)
 
     writer.save()
     writer.close()
