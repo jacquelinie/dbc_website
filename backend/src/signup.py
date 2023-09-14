@@ -34,37 +34,39 @@ def signup(name: str, email: str)->dict:
     store['users'] = users
     database.set(store)
 
-    send_email(customer_id)
-    exportToExcel(customer_id)
+    # send_email(customer_id)
+    # export_to_excel(customer_id)
+    # return {}
+    return customer_id
 
-    return {}
 
-
-def exportToExcel(customer_id):
+def export_to_excel(customer_id):
     store = database.get()
     users = store['users']
     user = users[customer_id]
 
     # Check for excel file, if doesn't exist create it
     excel_name = "Customer Emails.xlsx"
+    s_name = "Current Customers"
     if not os.path.exists(excel_name):
         Wb = Workbook()
         Wb.save(excel_name)
         # Create framework of excel
         df = pd.DataFrame(columns=["Name", "Email"])
-        df.to_excel(excel_name, sheet_name='Current Customers')
+        df.to_excel(excel_name, sheet_name=s_name)
 
     # Create data frame for customer
     data = {'Name': user["name"], 'Email': user["email"]}
-    df = pd.DataFrame(data)
+    df = pd.DataFrame(data, index=[1])
 
     # Append to excel
     book = load_workbook(excel_name)
     writer = pd.ExcelWriter(excel_name, engine='openpyxl')
     writer.book = book
 
-    df.to_excel(writer, index=False, header=False, startrow=writer.sheets['Sheet1'].max_row)
+    df.to_excel(writer, index=False, header=False)
 
     writer.save()
     writer.close()
+
     return {}
