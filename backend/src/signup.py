@@ -51,13 +51,11 @@ def exportToExcel(customer_id):
         Wb = Workbook()
         Wb.save(excel_name)
         # Create framework of excel
-        df = pd.DataFrame([[]], index=False, columns=["Name", "Email"])
+        df = pd.DataFrame(columns=["Name", "Email"])
         df.to_excel(excel_name, sheet_name='Current Customers')
 
-
     # Create data frame for customer
-    data = {'Name': user["name"] ,
-        'Email': user["email"]}
+    data = {'Name': user["name"], 'Email': user["email"]}
     df = pd.DataFrame(data)
 
     # Append to excel
@@ -69,5 +67,4 @@ def exportToExcel(customer_id):
 
     writer.save()
     writer.close()
-
     return {}
