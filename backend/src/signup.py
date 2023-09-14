@@ -50,13 +50,17 @@ def exportToExcel(customer_id):
     if not os.path.exists(excel_name):
         Wb = Workbook()
         Wb.save(excel_name)
+        # Create framework of excel
+        df = pd.DataFrame([[]], index=False, columns=["Name", "Email"])
+        df.to_excel(excel_name, sheet_name='Current Customers')
+
 
     # Create data frame for customer
     data = {'Name': user["name"] ,
         'Email': user["email"]}
     df = pd.DataFrame(data)
 
-    # Add to excel
+    # Append to excel
     book = load_workbook(excel_name)
     writer = pd.ExcelWriter(excel_name, engine='openpyxl')
     writer.book = book
