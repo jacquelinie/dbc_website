@@ -60,7 +60,7 @@ def export_to_excel(customer_id):
 
     # Append to excel
     book = load_workbook(excel_name)
-    writer = pd.ExcelWriter(excel_name, engine='openpyxl')
+    writer = pd.ExcelWriter(excel_name, engine='openpyxl', mode="a", if_sheet_exists="overlay")
     writer.book = book
 
     df.to_excel(writer, index=False, header=False, sheet_name=s_name)
