@@ -57,14 +57,16 @@ def export_to_excel(customer_id):
 
     # Create data frame for customer
     data = {'Name': user["name"], 'Email': user["email"]}
-    df = pd.DataFrame(data, index=[1])
+    # df = pd.DataFrame(data, index=[0])
 
     # Append to excel
+    existing_sheet = pd.read_excel(excel_name)
+    updated_sheet = existing_sheet.append(data, ignore_index=True)
     book = load_workbook(excel_name)
-    writer = pd.ExcelWriter(excel_name, engine='openpyxl', mode="a", if_sheet_exists="overlay")
+    writer = pd.ExcelWriter(excel_name, engine='openpyxl')
     writer.book = book
 
-    df.to_excel(writer, index=False, header=False, sheet_name=s_name)
+    updated_sheet.to_excel(writer, index=False, header=False, sheet_name=s_name)
 
     writer.save()
     writer.close()
