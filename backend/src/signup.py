@@ -57,7 +57,7 @@ def export_to_excel(customer_id):
 
     # Create data frame for customer
     data = {'Name': user["name"], 'Email': user["email"]}
-    df = pd.DataFrame(data, index=[1])
+    df = pd.DataFrame(data, index=[0])
 
     # Append to excel
     book = load_workbook(excel_name)
