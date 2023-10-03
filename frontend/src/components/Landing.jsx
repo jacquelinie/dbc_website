@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Landing.css";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-export const Login = (props) => {
+export const Landing = (props) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const navigate = useNavigate();
@@ -27,7 +27,6 @@ export const Login = (props) => {
     } catch (err) {
       // Handle error
       if (err.response.data.message === "<p>Invalid Email format</p>") {
-        //console.log(err);
         console.log(err);
         alert("Invalid Email format");
       } else {
@@ -38,7 +37,33 @@ export const Login = (props) => {
 
   return (
     <div className="auth-form-container">
-      <h2 className="large-text-white">Login</h2>
+      <h2 className="large-text-white">Welcome to DBC</h2>
+
+      {/* Text Box */}
+      <div className="text-box">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+          sagittis vel tortor nec auctor.
+        </p>
+      </div>
+
+      {/* Bullet Points */}
+      <ul className="bullet-points">
+        <li>Point 1: Lorem ipsum dolor sit amet</li>
+        <li>Point 2: Consectetur adipiscing elit</li>
+        <li>Point 3: Proin sagittis vel tortor nec auctor</li>
+      </ul>
+
+      {/* Image */}
+      <div className="image-container">
+        <img
+          src="path/to/your/image.jpg"
+          alt="Image Description"
+          className="image"
+        />
+      </div>
+
+      {/* Input Boxes */}
       <form className="login-form" onSubmit={handleSubmit}>
         {/* Email */}
         <label htmlFor="Email" className="title-white">
