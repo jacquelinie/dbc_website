@@ -2,7 +2,7 @@ import React from "react";
 import "./Free.css";
 import { Link } from "react-router-dom";
 
-const Free = () => {
+const FreePage = () => {
   return (
     <div className="free-container">
       <h1 className="large-title">Free Trial</h1>
@@ -35,4 +35,4 @@ const Free = () => {
   );
 };
 
-export default Free;
+export default FreePage;

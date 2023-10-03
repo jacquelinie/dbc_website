@@ -2,7 +2,7 @@ import React from "react";
 import "./Upsell.css";
 import { Link } from "react-router-dom";
 
-const Upsell = () => {
+const UpsellPage = () => {
   return (
     <div className="upsell-container">
       {/* Large Title */}
@@ -42,4 +42,4 @@ const Upsell = () => {
   );
 };
 
-export default Upsell;
+export default UpsellPage;

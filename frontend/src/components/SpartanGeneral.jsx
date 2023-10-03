@@ -3,7 +3,7 @@ import "./SpartanGeneral.css";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const SpartanGeneral = () => {
+const SpartanGeneralPage = () => {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const navigate = useNavigate();
@@ -111,4 +111,4 @@ const SpartanGeneral = () => {
   );
 };
 
-export default SpartanGeneral;
+export default SpartanGeneralPage;

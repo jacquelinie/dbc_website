@@ -2,7 +2,7 @@ import React from "react";
 import "./Offer.css";
 import { Link } from "react-router-dom";
 
-const Offer = () => {
+const OfferPage = () => {
   return (
     <div className="home-container">
       {/* Large Title */}
@@ -46,4 +46,4 @@ const Offer = () => {
   );
 };
 
-export default Offer;
+export default OfferPage;

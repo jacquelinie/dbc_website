@@ -3,7 +3,7 @@ import "./Landing.css";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-export const Landing = (props) => {
+const LandingPage = (props) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const navigate = useNavigate();
@@ -99,3 +99,6 @@ export const Landing = (props) => {
     </div>
   );
 };
+
+export default LandingPage;
+
