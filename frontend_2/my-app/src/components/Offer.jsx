@@ -11,8 +11,7 @@ const OfferPage = () => {
       {/* Mission Statement Box */}
       <div className="mission-box">
         <p>
-          Our mission is to provide the best solutions for your needs.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Dream body coaching: From Couch to Centre of Attention in 30 days have your dream physique now
         </p>
       </div>
 
@@ -36,7 +35,7 @@ const OfferPage = () => {
       {/* Bordered Text Box */}
       <div className="bordered-box">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis vel tortor nec auctor.
+          The Spartan Workout Challenge become a man in 14 days
         </p>
       </div>
 
