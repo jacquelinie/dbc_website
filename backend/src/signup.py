@@ -40,7 +40,7 @@ def signup(name: str, email: str)->dict:
     store['users'] = users
     database.set(store)
 
-    # send_email(customer_id)
+    send_email(customer_id)
     update_google_sheets(customer_id)
     return {}
 
