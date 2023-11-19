@@ -16,10 +16,10 @@ from flask import Flask, request, send_from_directory
 from flask_cors import CORS
 
 # Functions
-from src import config
-from src.signup import signup
-from src.email import send_email
-from src.database import clear_store
+import config
+from signup import signup
+from customer_email import send_email
+from database import clear_store
 
 
 # Exit

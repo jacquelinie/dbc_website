@@ -7,15 +7,13 @@ Created: 1/9/2023
 Description: Sends the free materials to the user
 
 '''
-import os
-
-from src.error import AccessError, InputError
+from error import AccessError, InputError
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
 from email import encoders
 import smtplib
-from src.database import database
+from database import database
 
 SENDER_EMAIL = "dbctesteremail@gmail.com"
 SENDER_PASS = "qyahwdqeiknagmqa"
