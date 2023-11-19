@@ -13,7 +13,7 @@ const LandingPage = (props) => {
     try {
       // Post Request
       const response = await Axios.post(
-        "http://127.0.0.1:8080/signup",
+        "http://dreambodycoaching-env.eba-c3irpcdi.ap-southeast-2.elasticbeanstalk.com/signup",
         {
           email: email,
           name: name,
