@@ -67,31 +67,9 @@ def export_to_excel():
     file_name = "Customer Emails.xlsx"
     excel_name = os.path.join(output_directory, file_name)
     s_name = "Current Customers"
-<<<<<<< HEAD
-    if not os.path.exists(excel_name):
-        Wb = Workbook()
-        Wb.save(excel_name)
-        # Create framework of excel
-        df = pd.DataFrame(columns=["Name", "Email"])
-        df.to_excel(excel_name, sheet_name=s_name)
-
-    # Create data frame for customer
-    data = {'Name': user["name"], 'Email': user["email"]}
-    # df = pd.DataFrame(data, index=[0])
-
-    # Append to excel
-    existing_sheet = pd.read_excel(excel_name)
-    updated_sheet = existing_sheet._append(data, ignore_index=True)
-    book = load_workbook(excel_name)
-    writer = pd.ExcelWriter(excel_name, engine='openpyxl')
-    writer.book = book
-
-    updated_sheet.to_excel(writer, index=False, header=False, sheet_name=s_name)
-=======
     # Remove old one
     if os.path.exists(excel_name):
         os.remove(excel_name)
->>>>>>> 83b3b374f83cebe5cf66beaa0231292ebb27b341
 
     # Create new excel
     Wb = Workbook()
