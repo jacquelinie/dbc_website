@@ -18,7 +18,7 @@ from flask_cors import CORS
 
 # Functions
 import config
-from signup import signup
+from signup import signup, export_to_excel
 from database import clear_store
 
 
