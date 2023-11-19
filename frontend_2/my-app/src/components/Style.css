@@ -1,0 +1,77 @@
+/* Variables */
+:root {
+    --black: rgba(0,0,0,1);
+    --dodger-blue: rgba(24,160,251,1);
+    --steel-blue: rgba(69,127,176,1);
+    --white: rgba(255,255,255,1);
+
+    --font-family-inter: "Inter";
+    --font-family-montserrat: "Montserrat";
+}
+
+
+/* Font configurations for consistent style */
+.large-text-white {
+    color: var(--white);
+    font: Montserrat;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.large-text-blue {
+    font: Montserrat;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.title-white{
+    font: Montserrat;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.title-steel-blue {
+    font: Montserrat;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.subtitle-steel-blue {
+    font: Montserrat;
+    font-size: 20px;
+}
+
+
+.med-text-white {
+    color: var(--white);
+    font: var(--font-family-montserrat);
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.med-text-steel-blue {
+    color: var(--steel-blue);
+    font: var(--font-family-montserrat);
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.med-text-dodger-blue {
+    color: var(--dodger-blue);
+    font: var(--font-family-inter);
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.text-dodger-blue {
+    color: var(--dodger-blue);
+    font: var(--font-family-montserrat);
+    font-size: 15px;
+    font-weight: 700;
+    font-style: normal;
+}

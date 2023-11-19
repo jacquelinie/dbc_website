@@ -23,7 +23,7 @@ const LandingPage = (props) => {
       console.log(response);
       //setReport(response.data);
       localStorage.setItem("userDetails", JSON.stringify(response.data));
-      navigate("/", { state: { report: "HelloWorld" } });
+      navigate("/information", { state: { report: "HelloWorld" } });
     } catch (err) {
       // Handle error
       if (err.response.data.message === "<p>Invalid Email format</p>") {
