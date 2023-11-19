@@ -12,3 +12,4 @@ def test_signup(clear):
     request_data = requests.post(other.SIGNUP_URL, json={'name': "Tester One", "email": "dbctesteremail@gmail.com"})
     status = request_data.status_code
     assert (status == 200) # Success
+

@@ -33,7 +33,7 @@ def send_email(customer_id):
 
     # Create email object
     email = MIMEMultipart()
-    email['Subject'] = "Dream Body Coaching" # message subject
+    email['Subject'] = "Dream Body Coaching Resources" # message subject
     email['From'] = SENDER_EMAIL
     email['To'] = recipient_email
     email.attach(MIMEText(content))  # message body

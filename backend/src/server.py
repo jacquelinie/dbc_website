@@ -12,13 +12,13 @@ Description: Contains the all functionality related to the API server
 import signal
 import sys
 from json import dumps
-from flask import Flask, request, send_from_directory
+from flask import Flask, request, send_from_directory, send_file
+from openpyxl import load_workbook, Workbook
 from flask_cors import CORS
 
 # Functions
 import config
 from signup import signup
-from customer_email import send_email
 from database import clear_store
 
 
@@ -66,6 +66,14 @@ def handle_signup():
     name = request_data.get('name', None)
     email = request_data.get('email', None)
     return signup(name, email)
+
+
+@application.route("/excel", methods=['POST'])
+def handle_excel():
+    excel_name = export_to_excel()["Excel"]
+    wb = load_workbook(excel_name)
+    wb.save(filename=excel_name)
+    return send_file(excel_name, as_attachment=True, mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
 
 # To run the API server
