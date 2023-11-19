@@ -30,12 +30,11 @@ def default_handler(err):
     return response
 
 # EB looks for an 'application' callable by default.
-application = Flask(__name__)
+application = Flask(__name__, static_folder="static_folder", static_url_path='')
 CORS(application)
 
 application.config['TRAP_HTTP_EXCEPTIONS'] = True
 application.register_error_handler(Exception, default_handler)
-
 
 # API Routes
 @application.route('/static/<path:path>')
@@ -44,8 +43,8 @@ def serve_static_path(path):
 
 
 @application.route('/', methods=['GET'])
-def handle_home():
-    return "Welcome to the DBC API deployment!"
+def serve():
+    return send_from_directory(application.static_folder, 'index.html')
 
 
 @application.route("/clear", methods=['DELETE'])
@@ -65,5 +64,5 @@ def handle_signup():
 # run the app.
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, quit_gracefully)
-    application.debug = True # Remove before deploying
+    application.debug = False # Remove before deploying
     application.run()
