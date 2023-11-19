@@ -18,7 +18,7 @@ from database import database
 SENDER_EMAIL = "dbctesteremail@gmail.com"
 SENDER_PASS = "qyahwdqeiknagmqa"
 RESOURCE_LIST = ["directory/Resource1.pdf", "directory/Resource2.pdf", "directory/Resource3.pdf", "directory/Resource4.pdf"]
-DIRECTORY_NAME = "src/"
+DIRECTORY_NAME = ""
 
 def send_email(customer_id):
     store = database.get()

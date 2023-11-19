@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "dream-body-coaching-excel",
+  "private_key_id": "0e3708c4f09e2b2f2cab12d675b93d02f7baec55",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCO3IGVMMhBjRvl\nVHxD1M+6/W1Up0XcDMaDokuqwPY68cC022bvwYeAF5TGjKmtIlzVJnHutN0/tsbp\n32ZSlcMY6Mg6J+NRpPfNLabS8khru8KTxVR5cMVicFAEwsnnI8kLSSWi8efq19zf\n7fvoHro5T1FzhjlihIY5aqwn47D49OhXUJF4djh9AqITc5hRFa9UxwN8+ZNHmE2E\nyy0jsuEm9xXEWkp2kuv6k5TvCBzcxwHIrZ1osbFlNMCSNCCPDehVwPz81usgU79u\n1q5KG+Ex81jn+ONTYbSFth/oMqMz84KBc25MBom/OQyp3Nt/ko0nEvqtYYyHGtzx\nat+LSkuLAgMBAAECggEABPxujAsfJ3qJ+1+5fpHni3qGMwArkK85dnqsSBINW1Kj\nYSyPKSsIqaXTtsz4rGbt9S/Zph/V4QAQwoozg1+1Zsx+ay6H4TTwGSR7ar1eCF84\nk/kSe7KTO7OjzKa9GT4cft0CB+/dd6Aqa1Ozs7mZfPU8aIXKFvAn0cqGplXCECOe\nvDkTvt42Ylqgi9BoIewhr9W9JjftHIoD5FiL2HT9HLp2EjQogXymwQcLLC2mXs65\nASnUR31oV7vj9q8VfFswl62pkeXOhS1IbnM4/cdGhL54sXMvBSOvw7B6MEE470aC\n4m82yx8q2DOZdepDMsyC15QKXAcG44E8nZ1k3pqkkQKBgQC/+p1Nj5RfohNtrNFu\nj9cAUkMA/belffbj8RaxWM1ch3vBbJrVFvcL4gOFn/F6snSRcZv6gjv+9CPDEZTx\nXs8jSqtWpWq1JmQ5wL8ZEXJPFx1pFM0O2gA+V5RZFZ2E8O5VCw9jqF/E4O/BuNcs\nVVHhof/+Lp+TzS+u2+5xDVlh/QKBgQC+gK9jjVX0jFPVJPD2FdPORtoBAnUdQ7jK\n+3GbsIoD3waeXB/a0DiJlHG+g7+ShRROemrJoFuZ1y/D1hYso78S6uXB2T7ytrsJ\ns6b6gmzzeUK2TnJvyLDS/rmhIqJqYwRWxG0BzBi1RSEKAddfqDu2B8X957vALx94\nhx8vS1U2JwKBgFkRp0XC5a3w/l6WHZzUM4Y8pEWjcT7g0Fk1E7g4YR8a5Ln672MK\nApiKxeOLL3gjr52DPkDdh4RkNOteDuJlgGj5TcEngfiF1V5OJNs2kvhK2yRTuEe5\nsP87luI1+x0gwxLFzOAJ0FUBn3sbjQlOlGzAwoplizgBrKvN8jSVYvDpAoGAQ9g4\nnk+7iPhg8svRNRLY9+GryihB5UY1DbU25Keev3oyNTvB7H+zYuwHBj6Nf3T9omVe\nmqgNd2B3llssUoGOjwIxCTSBgpcpTW85zIWen6dT5vFROBZVQw+MtKJNDW5uISib\nWcSCGCyic5nsRhj4CwABt0dMSkl9/8K/jGxb0IkCgYAu799mV41aQqvHBvI+eexv\nOgUEangT4ckUZkw6LIpx2od7aQjyA/aKPpqNOTUYoASuFr+edLRd0c5C4LuxRDWo\nSqf3SerjHG6kK/QQNB87ys5fTxryV9m1NsH9Ci7N9q/l6YZ2Bf1nfEO5rQH+pEST\na7q3J+9oJzGveokdATsrgQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "dream-body-coaching@dream-body-coaching-excel.iam.gserviceaccount.com",
+  "client_id": "112186176368482925081",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dream-body-coaching%40dream-body-coaching-excel.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
