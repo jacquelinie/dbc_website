@@ -30,7 +30,7 @@ def default_handler(err):
     return response
 
 # EB looks for an 'application' callable by default.
-application = Flask(__name__, static_folder="static_folder", static_url_path='')
+application = Flask(__name__, static_folder="static", static_url_path='')
 CORS(application)
 
 application.config['TRAP_HTTP_EXCEPTIONS'] = True
