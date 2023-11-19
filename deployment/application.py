@@ -31,6 +31,7 @@ def default_handler(err):
 
 # EB looks for an 'application' callable by default.
 application = Flask(__name__)
+CORS(application)
 
 application.config['TRAP_HTTP_EXCEPTIONS'] = True
 application.register_error_handler(Exception, default_handler)
