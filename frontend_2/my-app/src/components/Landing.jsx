@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Landing.css";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { logo } from "../icons/logo.png"; 
+import logo from "./icons/logo.jpg";
 
 const LandingPage = (props) => {
   const [email, setEmail] = useState("");
