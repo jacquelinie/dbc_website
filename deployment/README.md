@@ -19,6 +19,6 @@ Pasted here for your convenience:
 
 and
 
-### '</script><link href="/css/main.cd486f81.css" rel="stylesheet"></'
+### '<link href="/css/main.cd486f81.css" rel="stylesheet"></'
 
 
