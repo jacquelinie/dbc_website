@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Landing.css";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { logo } from "../icons/logo.png"; 
 
 const LandingPage = (props) => {
   const [email, setEmail] = useState("");
@@ -57,7 +58,7 @@ const LandingPage = (props) => {
       {/* Image */}
       <div className="image-container">
         <img
-          src="path/to/your/image.jpg"
+          src={logo}
           alt="Image Description"
           className="image"
         />
