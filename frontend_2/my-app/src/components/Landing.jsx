@@ -38,7 +38,7 @@ const LandingPage = (props) => {
 
   return (
     <div className="auth-form-container">
-      <h2 className="large-text-white">Welcome to DBC</h2>
+      <h2 className="large-text-white">We ARE VICTORIOUS</h2>
 
       {/* Text Box */}
       <div className="text-box">
