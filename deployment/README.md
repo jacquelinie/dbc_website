@@ -10,6 +10,11 @@ Inorder to deploy frontend, please make changes in a separate frontend repositor
 
 ### "npm run build"
 
-To generate a build folder. You then will need to copy and paste this content into the backend folder. 
+To generate a build folder. You then will need to copy and paste this content into the backend folder. (You can just replace all the content within the static folder with this content.)
 
-Note: Inorder for it to work, you need to move the css, js and media files out of the inner static folder and into the main static folder. Ensure you change the index.html file paths to reflect this change. 
+Note: Inorder for it to work, you need to move the css, js and media files out of the inner static folder and into the main static folder. (Follow the same structure as the current static folder PLEASE!)
+Ensure you change the index.html file paths to reflect this change.
+Pasted here for your convenience:
+### '<script defer="defer" src="/js/main.a4fd6f81.js"></script><link href="/css/main.cd486f81.css" rel="stylesheet"></'
+
+
