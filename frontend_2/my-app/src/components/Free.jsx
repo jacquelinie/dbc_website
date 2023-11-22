@@ -1,36 +1,31 @@
 import React from "react";
 import "./Free.css";
 import { Link } from "react-router-dom";
+import stock3 from "./icons/stock3.jpg";
 
 const FreePage = () => {
   return (
     <div className="free-container">
       <h1 className="large-title">Free Trial</h1>
-      
-      {/* First Text Box */}
+
+      {/* Text Box */}
       <div className="text-box">
-        <h2 className="subtitle">Textbox 1</h2>
-        <textarea
-          className="text-input"
-          rows="5"
-          placeholder="Enter your text here..."
-        ></textarea>
+        <h2 className="subtitle">We have emailed you our free resources. They make take up to 5 minutes to appear in your inbox. </h2>
       </div>
 
-      {/* Second Text Box */}
-      <div className="text-box">
-        <h2 className="subtitle">Textbox 2</h2>
-        <textarea
-          className="text-input"
-          rows="5"
-          placeholder="Enter more text here..."
-        ></textarea>
-      </div>
+      {/* Image */}
+      <div className="image-container">
+        <img
+          src={stock3}
+          alt="stock"
+          className="image"
+        />
 
       {/* Button for Navigation */}
-      <Link to="/" className="button">
-        Go Back Home
-      </Link>
+        <Link to="/" className="button">
+          Home
+        </Link>
+      </div>
     </div>
   );
 };

@@ -37,7 +37,7 @@ const SpartanGeneralPage = () => {
   return (
     <div className="spartan-container">
       {/* Large Title */}
-      <h1 className="large-title">Spartan</h1>
+      <h1 className="large-title">Spartan General</h1>
 
       {/* Video */}
       <div className="video-container">
@@ -45,7 +45,7 @@ const SpartanGeneralPage = () => {
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/VIDEO_ID"
+          src="https://www.youtube.com/embed/4utHavh8r3o"
           title="YouTube video player"
           frameborder="0"
           allowfullscreen
@@ -83,30 +83,12 @@ const SpartanGeneralPage = () => {
           name="name"
         ></input>
 
-        {/* Submit */}
-        <button className="subtitle-steel-blue" type="submit">
+        {/* Paypal Link */}
+        <a href="https://www.paypal.com/paypalme/DREAMBODYCOACHING?country.x=AU&locale.x=en_AU&fbclid=IwAR2cMlsgCK2J8lsT0BVFluN43rrdDzRLSVIPCg_Z2I4PEOznOYVn3aF7i-8" 
+           class="subtitle-steel-blue">
           Proceed to payment!
-        </button>
+        </a>
       </form>
-
-      {/* Textbox for Payment Options */}
-      <div className="textbox-container">
-        <h2 className="subtitle">Payment Options</h2>
-        <textarea
-          placeholder="Enter payment options here..."
-          className="textbox"
-          rows="4"
-        ></textarea>
-      </div>
-
-      {/* Additional Textbox */}
-      <div className="textbox-container">
-        <textarea
-          placeholder="Additional information..."
-          className="textbox"
-          rows="4"
-        ></textarea>
-      </div>
     </div>
   );
 };

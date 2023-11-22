@@ -5,13 +5,11 @@ import { Link } from "react-router-dom";
 const OfferPage = () => {
   return (
     <div className="home-container">
-      {/* Large Title */}
-      <h1 className="large-title">Welcome to Our Website</h1>
 
       {/* Mission Statement Box */}
       <div className="mission-box">
         <p>
-          Dream body coaching: From Couch to Centre of Attention in 30 days have your dream physique now
+          Every single part of this program is to educate and provide hope to young men around the world. A little investment and inspiration is all that is needed to change your life.
         </p>
       </div>
 
@@ -21,23 +19,23 @@ const OfferPage = () => {
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/VIDEO_ID"
+          src="https://www.youtube.com/embed/K74l26pE4YA"
           title="YouTube video player"
           frameborder="0"
           allowfullscreen
         ></iframe>
       </div>
-      {/* Button to Navigate to Upsell.jsx */}
-      <Link to="/premiumOffer" className="button">
-        Start your 14 day spartan plan
-      </Link>
-
       {/* Bordered Text Box */}
-      <div className="bordered-box">
+            <div className="bordered-box">
         <p>
-          The Spartan Workout Challenge become a man in 14 days
+          Become a man in 14 days with the Spartan workout challenge.
         </p>
       </div>
+
+      {/* Button to Navigate to Upsell.jsx */}
+      <Link to="/premiumOffer" className="button">
+        Learn about the 14 day Spartan plan
+      </Link>
 
       {/* Button to Navigate to Free.jsx */}
       <Link to="/confirmation" className="button">

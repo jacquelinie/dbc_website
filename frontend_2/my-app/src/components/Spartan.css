@@ -47,18 +47,20 @@ input[type="name"] {
 
 /* Button styles */
 .subtitle-steel-blue {
-  background-color: steelblue; /* Choose your desired button background color */
-  color: white; /* Choose your desired button text color */
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #007bff; /* Button color */
+  color: #ffffff; /* Text color */
+  border: 1px solid #007bff; /* Button border */
+  border-radius: 5px; /* Rounded corners */
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .subtitle-steel-blue:hover {
-  background-color: #336699; /* Choose your desired button hover color */
-}
+  background-color: #0056b3; /* Button color on hover */
+  border: 1px solid #0056b3; /* Button border on hover */}
 
 /* Textbox Container styles */
 .textbox-container {

@@ -1,20 +1,13 @@
 import React from "react";
 import "./Upsell.css";
 import { Link } from "react-router-dom";
-import webImg from "./icons/logo.jpg";
+// import webImg from "./icons/logo.jpg";
 
 const UpsellPage = () => {
   return (
     <div className="upsell-container">
       {/* Large Title */}
-      <h1 className="large-title">Upgrade to Premium</h1>
-
-      {/* Image */}
-      <div className="image-container">
-        < img src={webImg}
-          alt="Logo"
-        />
-      </div>
+      <h3 className="large-title">Would you like to upgrade to Premium?</h3>
 
       {/* Subtitles */}
       <h2 className="subtitle">Unlock Features</h2>
@@ -38,11 +31,6 @@ const UpsellPage = () => {
         <li>Social Media group where you can put photos</li>
         <li>Online leader board where you can post results</li>
       </ul>
-
-      {/* Image */}
-      <div className="image-container">
-        <img src="path/to/your/image.jpg" alt="Logo" className="image" />
-      </div>
 
       {/* Buttons for Navigation */}
       <Link to="/paymentPremium" className="button">

@@ -38,65 +38,76 @@ const LandingPage = (props) => {
 
   return (
     <div className="auth-form-container">
-      <h2 className="large-text-white">We ARE VICTORIOUS</h2>
+      {/* Left */}
+      <div className="left">
+        <h2 className="large-text-white">Welcome to DBC</h2>
 
-      {/* Text Box */}
-      <div className="text-box">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-          sagittis vel tortor nec auctor.
-        </p>
+        {/* Text Box */}
+        <div className="text-box">
+          <p>
+            Dream body coaching: From couch to centre of attention in 30 days, get your dream physique now!
+          </p>
+        </div>
+
+        {/* Bullet Points */}
+        <ul className="bullet-points">
+          <li>6-Week training program </li>
+          <li>Masculinity Book</li>
+          <li>Spartan Timetable</li>
+          <li>Accountability tracker</li>
+          <li>6 Week Diet Plan</li>
+          <li>Online consultation </li>
+          <li>Social Media group where you can put photos</li>
+          <li>Online leader board where you can post results</li>
+        </ul>
       </div>
 
-      {/* Bullet Points */}
-      <ul className="bullet-points">
-        <li>Point 1: Lorem ipsum dolor sit amet</li>
-        <li>Point 2: Consectetur adipiscing elit</li>
-        <li>Point 3: Proin sagittis vel tortor nec auctor</li>
-      </ul>
+      {/* Right */}
+      <div className="right">
 
-      {/* Image */}
-      <div className="image-container">
-        <img
-          src={logo}
-          alt="Image Description"
-          className="image"
-        />
+        {/* Image */}
+        <div className="image-container">
+          <img
+            src={logo}
+            alt="Logo"
+            className="image"
+          />
+        </div>
+
+        {/* Input Boxes */}
+        <form className="login-form" onSubmit={handleSubmit}>
+          {/* Email */}
+          <label htmlFor="Email" className="title-white">
+            Email
+          </label>
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            placeholder="youremail@gmail.com"
+            id="email"
+            name="email"
+          ></input>
+
+          {/* Name */}
+          <label htmlFor="Name" className="title-white">
+            Name
+          </label>
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            type="name"
+            placeholder="First and Last Name"
+            id="name"
+            name="name"
+          ></input>
+
+          {/* Submit */}
+          <button className="subtitle-steel-blue" type="submit">
+            Get my Free Guides!
+          </button>
+        </form>
       </div>
-
-      {/* Input Boxes */}
-      <form className="login-form" onSubmit={handleSubmit}>
-        {/* Email */}
-        <label htmlFor="Email" className="title-white">
-          Email
-        </label>
-        <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          type="email"
-          placeholder="youremail@gmail.com"
-          id="email"
-          name="email"
-        ></input>
-
-        {/* Name */}
-        <label htmlFor="Name" className="title-white">
-          Name
-        </label>
-        <input
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          type="name"
-          placeholder="First and Last Name"
-          id="name"
-          name="name"
-        ></input>
-
-        {/* Submit */}
-        <button className="subtitle-steel-blue" type="submit">
-          Get my Free Guides!
-        </button>
-      </form>
     </div>
   );
 };
