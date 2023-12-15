@@ -1,7 +1,7 @@
 import React from "react";
 import "./Free.css";
 import { Link } from "react-router-dom";
-import stock3 from "./icons/stock3.jpg";
+import stock3 from "./media/stock3.jpg";
 
 const FreePage = () => {
   return (
